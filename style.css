@@ -150,6 +150,13 @@ main {
   margin-bottom: 12px;
 }
 
+/* ---------- Empty homepage state ---------- */
+
+.empty-state {
+  max-width: 560px;
+  padding: 72px 0 96px;
+}
+
 /* ---------- Article & About pages ---------- */
 
 .article-header {

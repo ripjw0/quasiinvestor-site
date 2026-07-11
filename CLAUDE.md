@@ -59,9 +59,36 @@ Nothing else gets colour. No hover colours in teal, no teal buttons, no second a
 - Body copy (`.prose`): serif 18px (17px mobile), line-height 1.7, ink. Subheads are serif 22px `h2`s. Blockquotes get a 1px hairline left border with grey italic text — never teal. In-body links are ink with a thin underline (accent rule applies: no teal in body copy).
 - About page reuses the same header + prose structure, minus category label and byline.
 
+## Publishing a new post
+
+No CMS — the site migrated off WordPress (DreamHost) to static files on Cloudflare (Workers/Pages, project `quasiinvestor-site`, auto-deploys on push to `main` at github.com/ripjw0/quasiinvestor-site).
+
+1. Create a new slug-named file (e.g. `grab-earnings-q3.html`) from the article skeleton below, reusing the exact masthead/footer markup from `index.html` and the same `<head>` (Google Fonts link + `style.css`).
+2. Update `index.html`: put the newest post in the featured slot (`.featured` block: category, headline link, standfirst, meta) and/or add a `.card` in the `.recent` grid. While the site has no posts, `index.html` shows an `.empty-state` block ("Essays coming soon.") — replace it with the featured/grid structure when the first real post lands.
+3. Commit and push to `main` — Cloudflare redeploys automatically.
+
+Article page skeleton (inside `<main>`):
+
+```html
+<header class="article-header">
+  <p class="category">CATEGORY</p>
+  <h1 class="article-title">Headline</h1>
+  <p class="standfirst">Standfirst.</p>
+  <p class="meta">By Quasiinvestor &middot; N min read &middot; Month D, YYYY</p>
+</header>
+
+<hr class="divider article-divider">
+
+<div class="prose">
+  <p>…</p>
+  <h2>Subhead</h2>
+  <blockquote><p>…</p></blockquote>
+</div>
+```
+
 ## Files
 
-- `index.html` — homepage (currently placeholder article content)
-- `article.html` — individual article page template (placeholder body); copy this file for new articles
+- `index.html` — homepage (currently the no-posts empty state)
 - `about.html` — about page
+- Article pages — one slug-named `.html` file per post, built from the skeleton in "Publishing a new post" above
 - `style.css` — all styling; CSS custom properties for the palette are defined in `:root`
