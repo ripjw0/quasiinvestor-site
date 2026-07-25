@@ -23,6 +23,20 @@ body {
   background: #fff;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  border-top: 3px solid var(--ink);
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+}
+
+::selection {
+  background: var(--ink);
+  color: #fff;
 }
 
 a {
@@ -33,6 +47,7 @@ a {
 /* ---------- Masthead ---------- */
 
 .masthead {
+  width: 100%;
   max-width: 1000px;
   margin: 0 auto;
   padding: 28px 24px;
@@ -59,7 +74,10 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-  font-size: 14px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .nav a:hover {
@@ -94,6 +112,7 @@ main {
   font-weight: 700;
   line-height: 1.25;
   margin-bottom: 16px;
+  text-wrap: balance;
 }
 
 .featured-headline a:hover,
@@ -157,6 +176,15 @@ main {
   padding: 72px 0 96px;
 }
 
+.empty-headline {
+  font-family: var(--serif);
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 16px;
+  text-wrap: balance;
+}
+
 /* ---------- Article & About pages ---------- */
 
 .article-header {
@@ -170,6 +198,7 @@ main {
   font-weight: 700;
   line-height: 1.25;
   margin-bottom: 16px;
+  text-wrap: balance;
 }
 
 .article-divider {
@@ -227,10 +256,14 @@ main {
   padding: 24px calc(max((100% - 1000px) / 2, 0px) + 24px);
   display: flex;
   align-items: baseline;
-  justify-content: flex-end;
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 8px 32px;
-  font-size: 14px;
+  font-size: 13px;
+}
+
+.colophon {
+  color: var(--grey);
 }
 
 .subscribe {
@@ -252,8 +285,13 @@ main {
   }
 
   .featured-headline,
-  .article-title {
+  .article-title,
+  .empty-headline {
     font-size: 27px;
+  }
+
+  .empty-state {
+    padding: 48px 0 64px;
   }
 
   .article-header {
