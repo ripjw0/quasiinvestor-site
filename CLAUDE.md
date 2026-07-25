@@ -47,10 +47,17 @@ Nothing else gets colour. No hover colours in teal, no teal buttons, no second a
 
 ### Page structure (top to bottom)
 
-1. **Masthead** — wordmark left ("Quasi" ink + "investor" teal), nav right (About only — no article-topic links in the masthead, per owner preference), 1px hairline bottom border.
-2. **Featured article** — teal category label, large serif headline, grey standfirst, grey metadata line.
-3. **Hairline divider**, then 3-column recent-articles grid (category label, serif headline, read time each).
-4. **Footer strip** — teal "Subscribe →" right-aligned; no tagline.
+1. **Top rule** — full-bleed 3px solid ink border on `<body>` (print-newspaper folio rule).
+2. **Masthead** — wordmark left ("Quasi" ink + "investor" teal), nav right (About only — no article-topic links in the masthead, per owner preference; nav links are 12px uppercase, `letter-spacing: 0.1em`, ink), 1px hairline bottom border.
+3. **Featured article** — teal category label, large serif headline, grey standfirst, grey metadata line.
+4. **Hairline divider**, then 3-column recent-articles grid (category label, serif headline, read time each).
+5. **Footer strip** — grey "© YYYY Quasiinvestor" colophon left, teal "Subscribe →" right; no tagline. Footer is pinned to the viewport bottom on short pages (`body` is a flex column with `min-height: 100svh`; `main` has `flex: 1` — and `.masthead`/`main` need `width: 100%` so `margin: 0 auto` doesn't shrink them).
+
+### Other conventions
+
+- Every page's `<head>` carries og:title/og:description/og:type/og:url and the inline SVG favicon (teal square, white serif "Q", as a `data:image/svg+xml` URI — copy it verbatim from `index.html`).
+- Headlines use `text-wrap: balance`; `::selection` is ink background with white text.
+- While the site has no posts, the homepage shows an `.empty-state`: "Forthcoming" category label, serif `.empty-headline` ("Essays coming soon."), grey standfirst.
 
 ### Article & About pages
 
