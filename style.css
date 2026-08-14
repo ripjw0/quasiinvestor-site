@@ -105,7 +105,6 @@ nav {
 nav a,
 .label,
 .count,
-.fine,
 .site-footer span {
   font-family: var(--mono);
 }
@@ -182,15 +181,6 @@ h1 em {
   font-style: italic;
 }
 
-.dek {
-  max-width: 520px;
-  margin-top: 26px;
-  color: var(--body-muted);
-  font-size: 20px;
-  line-height: 1.6;
-  text-wrap: pretty;
-}
-
 .essays {
   padding: 54px 0 60px;
 }
@@ -251,27 +241,6 @@ h1 em {
   letter-spacing: -0.015em;
 }
 
-.essay-dek {
-  display: block;
-  margin-top: 7px;
-  color: var(--label-muted);
-  font-size: 17px;
-  line-height: 1.55;
-  text-wrap: pretty;
-}
-
-.fine {
-  margin-top: 26px;
-  padding-top: 22px;
-  border-top: 1px solid var(--hairline);
-  color: var(--meta-muted);
-  font-size: 12px;
-  line-height: 1.7;
-  letter-spacing: 0.03em;
-}
-
-.fine a,
-.about a,
 .about-page a {
   border-bottom: 1px solid rgba(0, 168, 232, 0.5);
 }
@@ -302,13 +271,6 @@ h1 em {
   font-size: 18px;
   line-height: 1.65;
   text-wrap: pretty;
-}
-
-.about .write {
-  color: var(--label-muted);
-  font-family: var(--mono);
-  font-size: 12px;
-  letter-spacing: 0.04em;
 }
 
 .site-footer {
@@ -408,10 +370,6 @@ h1 em {
 
   .hero {
     padding: 64px 0 56px;
-  }
-
-  .dek {
-    font-size: 18px;
   }
 
   .essay-index li {
