@@ -241,6 +241,14 @@ h1 em {
   letter-spacing: -0.015em;
 }
 
+.essay-dek {
+  margin-top: 8px;
+  color: var(--label-muted);
+  font-size: 17px;
+  line-height: 1.55;
+  text-wrap: pretty;
+}
+
 .about {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
@@ -312,6 +320,81 @@ h1 em {
   color: var(--ink);
   font-size: 23px;
   line-height: 1.5;
+}
+
+/* Individual essay pages. */
+.essay-page {
+  width: 100%;
+  max-width: 680px;
+  padding: 72px 0 96px;
+}
+
+.essay-page .essay-meta {
+  margin-bottom: 24px;
+  color: var(--label-muted);
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.essay-page h1 {
+  margin-bottom: 20px;
+  font-size: clamp(32px, 4.6vw, 46px);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+
+.essay-page .dek {
+  margin-bottom: 44px;
+  color: var(--ink-secondary);
+  font-size: 21px;
+  font-style: italic;
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+
+.essay-page .prose {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  color: var(--body-muted);
+  font-size: 19px;
+  line-height: 1.75;
+}
+
+.essay-page .prose a,
+.essay-page .sources a {
+  border-bottom: 1px solid rgba(0, 168, 232, 0.5);
+}
+
+.essay-page .prose a {
+  color: inherit;
+}
+
+.essay-page .prose a:hover,
+.essay-page .sources a:hover {
+  color: var(--accent-hover);
+  border-bottom-color: var(--accent-hover);
+}
+
+.essay-page .sources {
+  margin-top: 56px;
+  padding-top: 26px;
+  border-top: 1px solid var(--hairline);
+}
+
+.essay-page .sources .label {
+  display: block;
+  margin-bottom: 14px;
+}
+
+.essay-page .sources p {
+  color: var(--label-muted);
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.8;
 }
 
 @keyframes q-rise {
@@ -392,6 +475,18 @@ h1 em {
 
   .about-page .prose,
   .about-page .prose p:first-child {
+    font-size: 18px;
+  }
+
+  .essay-page {
+    padding: 56px 0 72px;
+  }
+
+  .essay-page .dek {
+    font-size: 19px;
+  }
+
+  .essay-page .prose {
     font-size: 18px;
   }
 }
