@@ -390,11 +390,20 @@ h1 em {
   margin-bottom: 14px;
 }
 
-.essay-page .sources p {
+.essay-page .sources p,
+.essay-page .sources ul {
   color: var(--label-muted);
   font-family: var(--mono);
   font-size: 12px;
   line-height: 1.8;
+}
+
+.essay-page .sources ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+  list-style: none;
 }
 
 @keyframes q-rise {
