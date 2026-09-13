@@ -1,4 +1,4 @@
-# Quasiinvestor — quasiinvestor.com
+# Quasiinvestor: quasiinvestor.com
 
 Quasiinvestor is a pre-launch editorial site for occasional essays on markets,
 technology, and the machinery underneath, often through a Southeast Asian lens.
@@ -11,10 +11,10 @@ directory deploys to Cloudflare Pages as-is.
 
 ## Site structure
 
-- `index.html` — one-page home with anchored Hero, Essays, and About sections.
-- `about.html` — a longer About page retained for existing inbound links.
-- `style.css` — shared design system and responsive styles.
-- `assets/quasi-logo.png` — transparent Q mark used for the lockup and favicon.
+- `index.html`: one-page home with anchored Hero, Essays, and About sections.
+- `about.html`: a longer About page retained for existing inbound links.
+- `style.css`: shared design system and responsive styles.
+- `assets/quasi-logo.png`: transparent Q mark used for the lockup and favicon.
 
 ## Design system
 
@@ -52,3 +52,11 @@ Replace the Forthcoming row in `index.html` with an entry containing a date, lin
 title, and dek. Essay URLs should use `/essays/<slug>`, and entries should be ordered
 newest first. Individual essay pages should reuse the same typography and keep body
 copy near a 680px measure.
+
+## Editorial style
+
+- Use plain punctuation and direct sentences.
+- Do not use em dashes.
+- Avoid stock contrast constructions such as "not X but Y" and "not only X but Y."
+- Avoid inflated claims and unnecessary self-characterization.
+- Keep About and disclaimer copy literal and concise.

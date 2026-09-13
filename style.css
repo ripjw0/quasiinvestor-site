@@ -4,9 +4,9 @@
   --ink-secondary: #123a6b;
   --body-muted: #3d4a63;
   --label-muted: #5c6a86;
-  --meta-muted: #8b8879;
+  --meta-muted: #6f6c5e;
   --accent: #00a8e8;
-  --accent-hover: #0090c8;
+  --accent-hover: #00769f;
   --hairline: rgba(11, 27, 58, 0.1);
   --serif: "Newsreader", Georgia, serif;
   --mono: "IBM Plex Mono", ui-monospace, monospace;
@@ -49,7 +49,7 @@ a:hover {
 }
 
 a:focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--accent-hover);
   outline-offset: 4px;
 }
 
